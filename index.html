@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Football Academy</title>
+    <link rel="icon" href="./logo.png">
+
+<style>
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* Header & Navigation */
+header {
+    background: #1a1a1a;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+
+}
+
+nav {
+    max-width:1708px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #eeeeee;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 3rem;
+    transition: color 0.3s;
+    font-weight: bolder;
+}
+
+nav ul li a:hover {
+    color: #4CAF50;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('https://images.unsplash.com/photo-1529900748604-07564a03e7a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content {
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #bfee3d;
+    color: #090303;
+    font-weight: bolder;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: #064a0a;
+    color: #eeeeee;
+    font-weight: bolder;
+}
+
+/* Programs Section */
+.programs {
+    padding: 5rem 2rem;
+    background: #f5f5f5;
+}
+
+.programs h2, .coaches h2, .contact h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+.program-cards {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card h3 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* Coaches Section */
+.coaches {
+    padding: 5rem 2rem;
+    background: #fff;
+}
+
+.coach-cards {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.coach {
+    text-align: center;
+}
+
+.coach-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    background-size: cover;
+    background-position: center;
+}
+
+.coach-1 {
+    background-image: url(./c1.jpg);
+}
+
+.coach-2 {
+    background-image: url(./c2.jpg);
+}
+
+.coach-3 {
+    background-image: url(./c3.jpg);
+}
+
+/* Contact Section */
+.contact {
+    padding: 5rem 2rem;
+    background: #f5f5f5;
+    text-align: center;
+}
+
+.contact-info {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-info p {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+/* Footer */
+footer {
+    background: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .program-cards, .coach-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Elite Football Academy</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#coaches">Coaches</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Elite Football Academy</h1>
+            <p>Developing Tomorrow's Football Stars Today</p>
+            <a href="./regis.html" class="cta-button">Join Now</a>
+        </div>
+    </section>
+
+    <section id="programs" class="programs">
+        <h2>Our Programs</h2>
+        <div class="program-cards">
+            <div class="card">
+                <h3>Youth Development</h3>
+                <p>Ages 6-12</p>
+                <p>Foundation skills and fun training sessions</p>
+            </div>
+            <div class="card">
+                <h3>Elite Training</h3>
+                <p>Ages 13-16</p>
+                <p>Advanced techniques and tactical understanding</p>
+            </div>
+            <div class="card">
+                <h3>Pro Pathway</h3>
+                <p>Ages 17-21</p>
+                <p>Professional development and career guidance</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="coaches" class="coaches">
+        <h2>Expert Coaches</h2>
+        <div class="coach-cards">
+            <div class="coach">
+                <div class="coach-img coach-1"></div>
+                <h3>Daine Klate</h3>
+                <p>Head Coach</p>
+            </div>
+            <div class="coach">
+                <div class="coach-img coach-2"></div>
+                <h3>Mike Puig</h3>
+                <p>Technical Director</p>
+            </div>
+            <div class="coach">
+                <div class="coach-img coach-3"></div>
+                <h3>Juliano Belletti</h3>
+                <p>Youth Coach</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <p>📍 123 Football Street, Sports City, Park Street</p>
+            <p>📞 (555) 123-4567</p>
+            <p>✉️ info@elitefootballacademy.com</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Elite Football Academy. All rights reserved.</p>
+    </footer>
+</body>
+</html>

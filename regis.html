@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Football Registration</title>
+    <link rel="icon" href="./logo.png">
+    <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: linear-gradient(135deg, #1a2a6c, #501fb2, #fdbb2d);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .registration-form {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 500;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  input:focus, select:focus {
+    outline: none;
+    border-color: #1a2a6c;
+  }
+  
+  .radio-group {
+    display: flex;
+    gap: 20px;
+    padding: 10px 0;
+  }
+  
+  .radio-group input[type="radio"] {
+    width: auto;
+    margin-right: 5px;
+  }
+  
+  .radio-group label {
+    display: inline;
+    margin: 0;
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px;
+    background: #1a2a6c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background: #2a3a7c;
+  }
+.home{
+    margin: 5px 14px;
+    padding: 4px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: small;
+}
+
+  @media (max-width: 480px) {
+    .registration-form {
+      padding: 20px;
+    }
+  
+    .form-row {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+  }
+
+
+
+    </style>
+
+
+  </head>
+  <body>
+    <div class="container">
+      <form class="registration-form">
+        <h1>Football Registration</h1>
+        
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" min="5" max="40" required>
+          </div>
+
+          <div class="form-group">
+            <label for="position">Position</label>
+            <select id="position" name="position" required>
+              <option value="">Select position</option>
+              <option value="goalkeeper">Goalkeeper</option>
+              <option value="defender">Defender</option>
+              <option value="midfielder">Midfielder</option>
+              <option value="forward">Forward</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+
+        <div class="form-group">
+          <label for="experience">Years of Experience</label>
+          <input type="number" id="experience" name="experience" min="0" max="30" required>
+        </div>
+
+        <div class="form-group">
+          <label>Preferred Foot</label>
+          <div class="radio-group">
+            <input type="radio" id="right" name="foot" value="right">
+            <label for="right">Right</label>
+            <input type="radio" id="left" name="foot" value="left">
+            <label for="left">Left</label>
+            <input type="radio" id="both" name="foot" value="both">
+            <label for="both">Both</label>
+          </div>
+        </div>
+
+        <button type="submit">Register Now</button>
+        <div class="home"><a href="./index.html">Go to Home</a></div>
+
+        
+      </form>
+    </div>
+  </body>
+</html>
